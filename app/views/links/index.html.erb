@@ -1,0 +1,26 @@
+<h1 class="center margin-t">YAUS: Yet Another URL Shortener</h1>
+
+<%= render 'form' %>
+<%= render 'notice' %>
+
+<div class="table-responsive margin-t">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Original Link</th>
+        <th>Short Link</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @links.each do |link| %>
+        <tr>
+          <td><%= link_to link.given_url, link.given_url %></td>
+          <td><%= link_to "#{ENV['BASE_URL']}#{link.slug}", "#{ENV['BASE_URL']}#{link.slug}" %></td>
+          <td><%= link_to 'Delete', link, method: :delete, data: { confirm: 'Are you sure?' }, type: "button", class: "btn btn-danger text-light" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

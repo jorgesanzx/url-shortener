@@ -1,0 +1,41 @@
+// Place all the styles related to the links controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Utility Classes
+.margin-t {
+  margin-top: 3rem;
+}
+
+.margin-t-sm {
+  margin-top: 1.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.text-light {
+  color: white !important;
+}
+
+// Forms
+@media (min-width: 768px) {
+  .form-inline .form-control {
+    width: 50rem;
+  }
+}
+
+// Alerts
+.alert {
+  max-width: 50rem;
+}
+
+// Tables
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td,
+.table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  vertical-align: middle;
+}
+
+
